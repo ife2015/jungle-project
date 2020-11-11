@@ -21,12 +21,6 @@
         </tr>
       </thead>
       <tbody>
-        <% p "-------------------------"%>
-        <% if (1+1==2) %>  
-          <% p enhanced_cart.length%>
-        <% else %>
-          <% p enhanced_cart%>
-        <% end %>
         <% enhanced_cart.each do |item| %>
           <%= render 'item', product: item[:product], quantity: item[:quantity].to_i %>
         <% end %>
