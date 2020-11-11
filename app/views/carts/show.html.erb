@@ -25,13 +25,12 @@
             TOTAL:
           </th>
           <th>
-            <%= cart_subtotal_cents / 100.0 %>
+            <%= number_to_currency(cart_subtotal_cents / 100.0) %>
           </th>
         </tr>
       </tfoot>
     </table>
   </div>
-
   <div class="row">
     <div class="col-xs-12">
       <%= form_tag orders_path do %>
