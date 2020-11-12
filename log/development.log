@@ -6675,3 +6675,28 @@ Processing by AboutsController#show as HTML
   [1m[35mCategory Load (0.7ms)[0m  SELECT "categories".* FROM "categories"
   Rendered layouts/_top_nav.html.erb (57.7ms)
 Completed 200 OK in 1808ms (Views: 1777.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/about" for 10.0.2.2 at 2020-11-12 02:47:54 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AboutsController#show as HTML
+  Rendered abouts/show.html.erb within layouts/application (5.6ms)
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (62.0ms)
+Completed 200 OK in 1460ms (Views: 1428.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/about" for 10.0.2.2 at 2020-11-12 02:48:30 +0000
+Processing by AboutsController#show as HTML
+  Rendered abouts/show.html.erb within layouts/application (0.3ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (2.3ms)
+Completed 200 OK in 320ms (Views: 318.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/about" for 10.0.2.2 at 2020-11-12 02:49:17 +0000
+Processing by AboutsController#show as HTML
+  Rendered abouts/show.html.erb within layouts/application (0.4ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (2.1ms)
+Completed 200 OK in 344ms (Views: 343.5ms | ActiveRecord: 0.3ms)
