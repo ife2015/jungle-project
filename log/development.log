@@ -6527,3 +6527,151 @@ Processing by Admin::DashboardController#show as HTML
   [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
   Rendered layouts/_top_nav.html.erb (2.6ms)
 Completed 200 OK in 351ms (Views: 348.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-12 02:12:20 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.8ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC
+  Rendered products/_product.html.erb (305.9ms)
+  Rendered products/index.html.erb within layouts/application (356.4ms)
+  Rendered layouts/_top_nav.html.erb (37.3ms)
+Completed 500 Internal Server Error in 2790ms (ActiveRecord: 4.2ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"about"} missing required keys: [:id]):
+    15:           <%= link_to 'Home', :root %>
+    16:         </li>
+    17:         <li>
+    18:           <%= link_to 'About Us', :about %>
+    19:         </li>
+    20:         <li class="dropdown">
+    21:           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+  app/views/layouts/_top_nav.html.erb:18:in `_app_views_layouts__top_nav_html_erb__4297639934912130143_69981502096300'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___206229004343867789_33657260'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.6ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (24.2ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (45.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-12 02:12:42 +0000
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC[0m
+  Rendered products/_product.html.erb (28.1ms)
+  Rendered products/index.html.erb within layouts/application (58.8ms)
+  Rendered layouts/_top_nav.html.erb (21.1ms)
+Completed 500 Internal Server Error in 531ms (ActiveRecord: 1.5ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"about"} missing required keys: [:id]):
+    15:           <%= link_to 'Home', :root %>
+    16:         </li>
+    17:         <li>
+    18:           <%= link_to 'About Us', :about %>
+    19:         </li>
+    20:         <li class="dropdown">
+    21:           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+  app/views/layouts/_top_nav.html.erb:18:in `_app_views_layouts__top_nav_html_erb__4297639934912130143_69981502096300'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___206229004343867789_33657260'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.8ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (19.9ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (39.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-12 02:15:18 +0000
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC
+  Rendered products/_product.html.erb (16.3ms)
+  Rendered products/index.html.erb within layouts/application (42.1ms)
+  Rendered layouts/_top_nav.html.erb (22.8ms)
+Completed 500 Internal Server Error in 473ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"about"} missing required keys: [:id]):
+    15:           <%= link_to 'Home', :root %>
+    16:         </li>
+    17:         <li>
+    18:           <%= link_to 'About Us', :about %>
+    19:         </li>
+    20:         <li class="dropdown">
+    21:           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+  app/views/layouts/_top_nav.html.erb:18:in `_app_views_layouts__top_nav_html_erb__4297639934912130143_69981502096300'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___206229004343867789_33657260'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.5ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.8ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.5/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-12 02:16:13 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (1.2ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC
+  Rendered products/_product.html.erb (301.2ms)
+  Rendered products/index.html.erb within layouts/application (354.9ms)
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (66.1ms)
+Completed 200 OK in 2501ms (Views: 2386.5ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/about" for 10.0.2.2 at 2020-11-12 02:16:18 +0000
+Processing by AboutsController#show as HTML
+  Rendered abouts/show.html.erb within layouts/application (0.4ms)
+  [1m[35mCategory Load (0.7ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (5.0ms)
+Completed 200 OK in 496ms (Views: 494.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/about" for 10.0.2.2 at 2020-11-12 02:17:59 +0000
+Processing by AboutsController#show as HTML
+  Rendered abouts/show.html.erb within layouts/application (0.1ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (41.3ms)
+Completed 200 OK in 550ms (Views: 547.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/about" for 10.0.2.2 at 2020-11-12 02:19:06 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AboutsController#show as HTML
+  Rendered abouts/show.html.erb within layouts/application (9.3ms)
+  [1m[35mCategory Load (0.7ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (58.1ms)
+Completed 200 OK in 2520ms (Views: 2486.0ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/about" for 10.0.2.2 at 2020-11-12 02:19:38 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AboutsController#show as HTML
+  Rendered abouts/show.html.erb within layouts/application (5.6ms)
+  [1m[35mCategory Load (0.7ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (57.7ms)
+Completed 200 OK in 1808ms (Views: 1777.3ms | ActiveRecord: 3.9ms)
