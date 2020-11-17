@@ -7,6 +7,7 @@ end
 RSpec.describe Product, type: :model do
   describe 'Validations' do
     it "saves succefully with all four fields" do 
+      # validation tests/examples here
     
       @category = Category.new(:name =>"Airplane")
 
@@ -20,7 +21,6 @@ RSpec.describe Product, type: :model do
       @products.save
 
       expect(@products.id).to be_present
-      # validation tests/examples here
     end
 
     it "should not be valid without a name" do 
@@ -35,7 +35,6 @@ RSpec.describe Product, type: :model do
       )
 
       @products.valid?
-
       expect(@products.errors.full_messages).to include("Name can't be blank")
     end
 
@@ -52,7 +51,6 @@ RSpec.describe Product, type: :model do
      )
 
      @products.valid?
-
      expect(@products.errors.full_messages).to include("Quantity can't be blank")
     end
 
@@ -69,7 +67,6 @@ RSpec.describe Product, type: :model do
      )
 
      @products.valid?
-
      expect(@products.errors.full_messages).to include("Price can't be blank")
     end
 
@@ -86,7 +83,6 @@ RSpec.describe Product, type: :model do
      )
 
      @products.valid?
-
      expect(@products.errors.full_messages).to include("Category can't be blank")
     end
   end
