@@ -45,6 +45,9 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
   gem 'quiet_assets'
   gem 'dotenv-rails'
+  gem 'capybara' # feature test library
+  gem 'poltergeist' # gem to connect phantomjs (web driver)
+  gem 'database_cleaner' # cleans gems containing strategies for cleaning your database in Ruby.
 end
 
 group :development do
