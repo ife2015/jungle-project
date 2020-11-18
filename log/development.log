@@ -9487,3 +9487,1299 @@ Processing by ProductsController#index as HTML
   [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
   Rendered layouts/_top_nav.html.erb (3.2ms)
 Completed 200 OK in 440ms (Views: 437.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 19:40:16 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mProduct Load (0.7ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC[0m
+  Rendered products/_product.html.erb (307.4ms)
+  Rendered products/index.html.erb within layouts/application (356.6ms)
+  [1m[35mCategory Load (0.5ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (87.1ms)
+Completed 200 OK in 2589ms (Views: 2370.5ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 19:40:21 +0000
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC
+  Rendered products/_product.html.erb (17.7ms)
+  Rendered products/index.html.erb within layouts/application (42.2ms)
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (3.3ms)
+Completed 200 OK in 468ms (Views: 464.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/about" for 10.0.2.2 at 2020-11-18 19:41:07 +0000
+Processing by AboutsController#show as HTML
+  Rendered abouts/show.html.erb within layouts/application (0.6ms)
+  [1m[35mCategory Load (0.6ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (4.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 425ms (Views: 423.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/categories/6" for 10.0.2.2 at 2020-11-18 19:41:15 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = $1[0m  [["category_id", 6]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."category_id" = $1  ORDER BY "products"."created_at" DESC  [["category_id", 6]]
+  Rendered collection (0.0ms)
+  Rendered categories/show.html.erb within layouts/application (7.1ms)
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (3.7ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 200 OK in 508ms (Views: 444.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/categories/5" for 10.0.2.2 at 2020-11-18 19:41:17 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "products" WHERE "products"."category_id" = $1  [["category_id", 5]]
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."category_id" = $1  ORDER BY "products"."created_at" DESC[0m  [["category_id", 5]]
+  Rendered collection (0.0ms)
+  Rendered categories/show.html.erb within layouts/application (4.8ms)
+  [1m[35mCategory Load (0.5ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (5.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 517ms (Views: 511.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/categories/4" for 10.0.2.2 at 2020-11-18 19:41:19 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mCategory Load (0.5ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = $1[0m  [["category_id", 4]]
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products" WHERE "products"."category_id" = $1  ORDER BY "products"."created_at" DESC  [["category_id", 4]]
+  Rendered collection (0.0ms)
+  Rendered categories/show.html.erb within layouts/application (4.3ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (4.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 200 OK in 459ms (Views: 454.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/categories/3" for 10.0.2.2 at 2020-11-18 19:41:21 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "products" WHERE "products"."category_id" = $1  [["category_id", 3]]
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."category_id" = $1  ORDER BY "products"."created_at" DESC[0m  [["category_id", 3]]
+  Rendered products/_product.html.erb (4.7ms)
+  Rendered categories/show.html.erb within layouts/application (53.6ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (3.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 435ms (Views: 430.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/categories/2" for 10.0.2.2 at 2020-11-18 19:41:25 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mCategory Load (0.4ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = $1[0m  [["category_id", 2]]
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products" WHERE "products"."category_id" = $1  ORDER BY "products"."created_at" DESC  [["category_id", 2]]
+  Rendered products/_product.html.erb (3.1ms)
+  Rendered categories/show.html.erb within layouts/application (24.6ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (3.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 200 OK in 410ms (Views: 405.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/categories/1" for 10.0.2.2 at 2020-11-18 19:41:27 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "products" WHERE "products"."category_id" = $1  [["category_id", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."category_id" = $1  ORDER BY "products"."created_at" DESC[0m  [["category_id", 1]]
+  Rendered products/_product.html.erb (7.7ms)
+  Rendered categories/show.html.erb within layouts/application (29.2ms)
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (3.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 388ms (Views: 382.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 19:41:54 +0000
+Processing by ProductsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mProduct Load (1.7ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC[0m
+  Rendered products/_product.html.erb (24.3ms)
+  Rendered products/index.html.erb within layouts/application (64.8ms)
+  [1m[35mCategory Load (0.9ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (6.1ms)
+Completed 200 OK in 609ms (Views: 603.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/about" for 10.0.2.2 at 2020-11-18 19:42:24 +0000
+Processing by AboutsController#show as HTML
+  Rendered abouts/show.html.erb within layouts/application (0.1ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (5.3ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 200 OK in 755ms (Views: 752.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/products" for 10.0.2.2 at 2020-11-18 19:44:28 +0000
+Processing by Admin::ProductsController#index as HTML
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."id" DESC[0m
+  [1m[35mCategory Load (0.5ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered admin/products/_product.html.erb (29.4ms)
+  Rendered admin/products/index.html.erb within layouts/application (52.7ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (2.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 200 OK in 477ms (Views: 472.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/admin/products/new" for 10.0.2.2 at 2020-11-18 19:46:13 +0000
+Processing by Admin::ProductsController#new as HTML
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT "categories".* FROM "categories"  ORDER BY "categories"."name" ASC[0m
+  Rendered admin/products/new.html.erb within layouts/application (126.1ms)
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (5.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 712ms (Views: 709.0ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/admin/products" for 10.0.2.2 at 2020-11-18 19:50:38 +0000
+Processing by Admin::ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TJ1DYVQptic3YgEdmAbmVfDGZI+V5aADdQC1ufSaMRcWEnd+2In2CbXMrW2A0mDUvD5hUpb96ESiTnx5QWi0hg==", "product"=>{"name"=>"Neck Pillow Realistic Simulation Large Shrimp U Shaped Pillow Cushion Plush Toy", "description"=>"Cotton\r\nFun: Brighten decor in your home and then pack it for a trip.\r\nSoft: Comfortable and fun. Full circle of thick PP cotton for support you every time.\r\nUse: Decorative, body, travel, sleeping, bedding.\r\nEasy to clean: Surface clean with mild soap and water.Hand wash only, no machine wash, air dry.\r\nMaterial: PP cotton, plush. Size: 40*30*10 cm/15.76*11.82*3.94in Note: Due to the light and technology, please allowed a little differences on color in kind.", "category_id"=>"1", "quantity"=>"50", "price"=>"20.99", "image"=>#<ActionDispatch::Http::UploadedFile:0x00000000013c5ab8 @tempfile=#<Tempfile:/tmp/RackMultipart20201118-20314-1ojyxzi.jpg>, @original_filename="31-weird-products-that-really-exist-and-honestly--2-1346-1570482569-0_dblbig.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image]\"; filename=\"31-weird-products-that-really-exist-and-honestly--2-1346-1570482569-0_dblbig.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Product"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "products" ("name", "description", "category_id", "quantity", "image", "price_cents", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["name", "Neck Pillow Realistic Simulation Large Shrimp U Shaped Pillow Cushion Plush Toy"], ["description", "Cotton\r\nFun: Brighten decor in your home and then pack it for a trip.\r\nSoft: Comfortable and fun. Full circle of thick PP cotton for support you every time.\r\nUse: Decorative, body, travel, sleeping, bedding.\r\nEasy to clean: Surface clean with mild soap and water.Hand wash only, no machine wash, air dry.\r\nMaterial: PP cotton, plush. Size: 40*30*10 cm/15.76*11.82*3.94in Note: Due to the light and technology, please allowed a little differences on color in kind."], ["category_id", 1], ["quantity", 50], ["image", "31-weird-products-that-really-exist-and-honestly--2-1346-1570482569-0_dblbig.jpg"], ["price_cents", 2099], ["created_at", "2020-11-18 19:50:39.060996"], ["updated_at", "2020-11-18 19:50:39.060996"]]
+  [1m[36m (4.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/products
+Completed 302 Found in 532ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/admin/products" for 10.0.2.2 at 2020-11-18 19:50:39 +0000
+Processing by Admin::ProductsController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."id" DESC
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCategory Load (0.6ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered admin/products/_product.html.erb (30.4ms)
+  Rendered admin/products/index.html.erb within layouts/application (66.3ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (2.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 200 OK in 465ms (Views: 460.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 19:50:55 +0000
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC
+  Rendered products/_product.html.erb (9.1ms)
+  Rendered products/index.html.erb within layouts/application (29.7ms)
+  [1m[36mCategory Load (0.7ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (3.9ms)
+Completed 200 OK in 449ms (Views: 445.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/categories" for 10.0.2.2 at 2020-11-18 19:53:23 +0000
+Processing by Admin::CategoriesController#index as HTML
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"  ORDER BY "categories"."id" DESC
+  Rendered admin/categories/_category.html.erb (0.7ms)
+  Rendered admin/categories/index.html.erb within layouts/application (35.9ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (2.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 200 OK in 496ms (Views: 454.8ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/admin/categories/new" for 10.0.2.2 at 2020-11-18 19:53:25 +0000
+Processing by Admin::CategoriesController#new as HTML
+  Rendered admin/categories/new.html.erb within layouts/application (1.5ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (2.5ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 200 OK in 346ms (Views: 344.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/admin/categories" for 10.0.2.2 at 2020-11-18 19:53:31 +0000
+Processing by Admin::CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"py5YnlZfmzmGD300Cj5E/oI3bEpM8tpnyDC7jB4+4nb9oWyB2v/bFwSh0UQS6sJ/zs9pl0/qkiAffnJMq8xn5w==", "category"=>{"name"=>"Hats"}, "commit"=>"Create New Category"}
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Hats"], ["created_at", "2020-11-18 19:53:31.362311"], ["updated_at", "2020-11-18 19:53:31.362311"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/categories
+Completed 302 Found in 9ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/admin/categories" for 10.0.2.2 at 2020-11-18 19:53:31 +0000
+Processing by Admin::CategoriesController#index as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"  ORDER BY "categories"."id" DESC
+  Rendered admin/categories/_category.html.erb (0.2ms)
+  Rendered admin/categories/index.html.erb within layouts/application (25.1ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (2.5ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 200 OK in 362ms (Views: 360.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin" for 10.0.2.2 at 2020-11-18 19:53:38 +0000
+Processing by Admin::DashboardController#show as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "categories"
+  Rendered admin/dashboard/show.html.erb within layouts/application (3.9ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (3.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 200 OK in 326ms (Views: 279.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/logout" for 10.0.2.2 at 2020-11-18 19:55:52 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2020-11-18 19:55:52 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (48.8ms)
+Completed 200 OK in 441ms (Views: 437.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 19:55:54 +0000
+Processing by ProductsController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2020-11-18 19:55:54 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (3.3ms)
+Completed 200 OK in 345ms (Views: 343.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/about" for 10.0.2.2 at 2020-11-18 19:55:56 +0000
+Processing by AboutsController#show as HTML
+  Rendered abouts/show.html.erb within layouts/application (0.1ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (3.1ms)
+Completed 200 OK in 339ms (Views: 338.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories/1" for 10.0.2.2 at 2020-11-18 19:55:59 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.5ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = $1[0m  [["category_id", 1]]
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products" WHERE "products"."category_id" = $1  ORDER BY "products"."created_at" DESC  [["category_id", 1]]
+  Rendered products/_product.html.erb (8.3ms)
+  Rendered categories/show.html.erb within layouts/application (48.9ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (3.2ms)
+Completed 200 OK in 424ms (Views: 363.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/categories/2" for 10.0.2.2 at 2020-11-18 19:56:03 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mCategory Load (0.4ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = $1[0m  [["category_id", 2]]
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products" WHERE "products"."category_id" = $1  ORDER BY "products"."created_at" DESC  [["category_id", 2]]
+  Rendered products/_product.html.erb (2.4ms)
+  Rendered categories/show.html.erb within layouts/application (25.7ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (2.9ms)
+Completed 200 OK in 639ms (Views: 636.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/categories/6" for 10.0.2.2 at 2020-11-18 19:56:06 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = $1[0m  [["category_id", 6]]
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products" WHERE "products"."category_id" = $1  ORDER BY "products"."created_at" DESC  [["category_id", 6]]
+  Rendered collection (0.0ms)
+  Rendered categories/show.html.erb within layouts/application (3.6ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (2.1ms)
+Completed 200 OK in 304ms (Views: 300.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/categories/3" for 10.0.2.2 at 2020-11-18 19:56:08 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = $1[0m  [["category_id", 3]]
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" WHERE "products"."category_id" = $1  ORDER BY "products"."created_at" DESC  [["category_id", 3]]
+  Rendered products/_product.html.erb (3.4ms)
+  Rendered categories/show.html.erb within layouts/application (23.4ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (2.8ms)
+Completed 200 OK in 337ms (Views: 333.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/signup" for 10.0.2.2 at 2020-11-18 19:56:20 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (7.8ms)
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (2.2ms)
+Completed 200 OK in 290ms (Views: 289.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2020-11-18 19:56:56 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (2.0ms)
+Completed 200 OK in 411ms (Views: 410.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for 10.0.2.2 at 2020-11-18 19:57:06 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8ku8/wbiyE1gqvMsk9m3fE9D+4UU1GFIYupqpk1jGvKoxIjgikKIY+IEX1yLDTH9A7v+WBfMKQ+1pKNm+JGfYw==", "email"=>"jokesonyou@gmail.com", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "jokesonyou@gmail.com"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "jokesonyou@gmail.com"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 95ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 19:57:06 +0000
+Processing by ProductsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC[0m
+  Rendered products/_product.html.erb (24.2ms)
+  Rendered products/index.html.erb within layouts/application (44.4ms)
+  [1m[35mCategory Load (0.5ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (2.4ms)
+Completed 200 OK in 378ms (Views: 375.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 19:57:09 +0000
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC
+  Rendered products/_product.html.erb (11.0ms)
+  Rendered products/index.html.erb within layouts/application (29.0ms)
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (3.2ms)
+Completed 200 OK in 319ms (Views: 315.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/about" for 10.0.2.2 at 2020-11-18 19:57:11 +0000
+Processing by AboutsController#show as HTML
+  Rendered abouts/show.html.erb within layouts/application (0.1ms)
+  [1m[35mCategory Load (0.7ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (2.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 338ms (Views: 336.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/categories/2" for 10.0.2.2 at 2020-11-18 19:57:13 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mCategory Load (0.4ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = $1[0m  [["category_id", 2]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."category_id" = $1  ORDER BY "products"."created_at" DESC  [["category_id", 2]]
+  Rendered products/_product.html.erb (2.5ms)
+  Rendered categories/show.html.erb within layouts/application (22.7ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (2.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 200 OK in 317ms (Views: 312.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/logout" for 10.0.2.2 at 2020-11-18 19:58:21 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2020-11-18 19:58:21 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (62.1ms)
+Completed 200 OK in 467ms (Views: 462.4ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/signup" for 10.0.2.2 at 2020-11-18 19:58:23 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.5ms)
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (3.2ms)
+Completed 200 OK in 399ms (Views: 398.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2020-11-18 19:58:37 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B/WZMDMAhgejZDSWjomFHTWOhTbr1fdfx0Rq7df+Z1xdeq0vv6DGKSHKmOaWXQOceXaA6+jNvxgQCqMtYgzizQ==", "user"=>{"name"=>"Ife", "email"=>"jokesonyou@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'jokesonyou@gmail.com' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+Redirected to http://localhost:3000/signup
+Completed 302 Found in 139ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/signup" for 10.0.2.2 at 2020-11-18 19:58:37 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.6ms)
+  [1m[35mCategory Load (0.5ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (2.3ms)
+Completed 200 OK in 370ms (Views: 369.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2020-11-18 19:59:35 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (5.3ms)
+Completed 200 OK in 552ms (Views: 550.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/login" for 10.0.2.2 at 2020-11-18 19:59:45 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S1Ba/InJ97IL7IquE3SvHNYnj5PrXoQYwN95vy3AGBkR327jBWm3nIlCJt4LoCmdmt+KTuhGzF8XkbB/mDKdiA==", "email"=>"jokesonyou@gmail.com", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "jokesonyou@gmail.com"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "jokesonyou@gmail.com"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 70ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 19:59:45 +0000
+Processing by ProductsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC[0m
+  Rendered products/_product.html.erb (18.5ms)
+  Rendered products/index.html.erb within layouts/application (46.2ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (2.1ms)
+Completed 200 OK in 502ms (Views: 450.5ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/cart/add_item?product_id=13" for 10.0.2.2 at 2020-11-18 19:59:48 +0000
+Processing by CartsController#add_item as HTML
+  Parameters: {"authenticity_token"=>"dVSewpy2LIvTnL+ARmNGDRUR6RiPvNKBOzSdx2YHE1Mv26rdEBZspVEyE/Bet8CMWensxYykmsbselQH0/WWwg==", "product_id"=>"13"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 19:59:48 +0000
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mProduct Load (0.9ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC
+  Rendered products/_product.html.erb (30.5ms)
+  Rendered products/index.html.erb within layouts/application (72.8ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (2.4ms)
+Completed 200 OK in 601ms (Views: 597.7ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/cart/add_item?product_id=12" for 10.0.2.2 at 2020-11-18 19:59:52 +0000
+Processing by CartsController#add_item as HTML
+  Parameters: {"authenticity_token"=>"TPEi3+l+Ed9zfFIWCBzxAhzvFr6X5eSK304IBmwGdPMWfhbAZd5R8fHS/mYQyHeDUBcTY5T9rM0IAMHG2fTxYg==", "product_id"=>"12"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 19:59:52 +0000
+Processing by ProductsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mProduct Load (0.7ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC[0m
+  Rendered products/_product.html.erb (19.5ms)
+  Rendered products/index.html.erb within layouts/application (79.2ms)
+  [1m[35mCategory Load (0.7ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (3.9ms)
+Completed 200 OK in 595ms (Views: 591.8ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/cart/add_item?product_id=11" for 10.0.2.2 at 2020-11-18 19:59:55 +0000
+Processing by CartsController#add_item as HTML
+  Parameters: {"authenticity_token"=>"rw7xuCwowAynLQEfr7hKOyzfg8kCnbGqWmSFSbJEMZP1gcWnoIiAIiWDrW+3bMy6YCeGFAGF+e2NKkyJB7a0Ag==", "product_id"=>"11"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 19:59:55 +0000
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC
+  Rendered products/_product.html.erb (13.2ms)
+  Rendered products/index.html.erb within layouts/application (33.7ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (2.2ms)
+Completed 200 OK in 362ms (Views: 358.1ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/cart/add_item?product_id=10" for 10.0.2.2 at 2020-11-18 19:59:57 +0000
+Processing by CartsController#add_item as HTML
+  Parameters: {"authenticity_token"=>"XnSaPlJp7CD/ob9nSpNliicjRsX/VBIjNSH1hhU1kxAE+64h3smsDn0PExdSR+MLa9tDGPxMWmTibzxGoMcWgQ==", "product_id"=>"10"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 19:59:57 +0000
+Processing by ProductsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC[0m
+  Rendered products/_product.html.erb (16.8ms)
+  Rendered products/index.html.erb within layouts/application (49.8ms)
+  [1m[35mCategory Load (0.6ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (4.6ms)
+Completed 200 OK in 574ms (Views: 570.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/cart" for 10.0.2.2 at 2020-11-18 19:59:59 +0000
+Processing by CartsController#show as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" IN (13, 12, 11, 10)[0m
+  Rendered carts/_item.html.erb (2.8ms)
+  Rendered carts/_item.html.erb (1.6ms)
+  Rendered carts/_item.html.erb (2.4ms)
+  Rendered carts/_item.html.erb (1.8ms)
+  Rendered carts/show.html.erb within layouts/application (114.8ms)
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (2.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 524ms (Views: 521.9ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/cart/add_item?product_id=13" for 10.0.2.2 at 2020-11-18 20:00:08 +0000
+Processing by CartsController#add_item as HTML
+  Parameters: {"authenticity_token"=>"KrYXbE8nrrS7zyB7nmF1zAz+HFoVWHlZbWjGPbopad1wOSNzw4fumjlhjAuGtfNNQAYZhxZAMR66Jg/9D9vsTA==", "product_id"=>"13"}
+Redirected to http://localhost:3000/cart
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/cart" for 10.0.2.2 at 2020-11-18 20:00:08 +0000
+Processing by CartsController#show as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" IN (13, 12, 11, 10)
+  Rendered carts/_item.html.erb (1.5ms)
+  Rendered carts/_item.html.erb (1.4ms)
+  Rendered carts/_item.html.erb (1.5ms)
+  Rendered carts/_item.html.erb (2.1ms)
+  Rendered carts/show.html.erb within layouts/application (119.1ms)
+  [1m[36mCategory Load (0.7ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (3.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 200 OK in 522ms (Views: 520.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/orders" for 10.0.2.2 at 2020-11-18 20:00:46 +0000
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WNYkqfV4oJRUxqGr9xHqr8vbLJ2aq6rWx8x/Mklw2JICWRC2edjgutZoDdvvxWwuhyMpQJmz4pEQgrby/IJdAw==", "stripeToken"=>"tok_1HowpcJCdYEkm976pA3Su86m", "stripeTokenType"=>"card", "stripeEmail"=>"kvirani@gmail.com"}
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" IN (13, 12, 11, 10)[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "orders" ("email", "total_cents", "stripe_charge_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "kvirani@gmail.com"], ["total_cents", 656538], ["stripe_charge_id", "ch_1HowpfJCdYEkm976B9MvvYlJ"], ["created_at", "2020-11-18 20:00:48.158776"], ["updated_at", "2020-11-18 20:00:48.158776"]]
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "line_items" ("product_id", "quantity", "item_price_cents", "total_price_cents", "order_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["product_id", 10], ["quantity", 1], ["item_price_cents", 305200], ["total_price_cents", 305200], ["order_id", 7], ["created_at", "2020-11-18 20:00:48.162448"], ["updated_at", "2020-11-18 20:00:48.162448"]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "line_items" ("product_id", "quantity", "item_price_cents", "total_price_cents", "order_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["product_id", 11], ["quantity", 1], ["item_price_cents", 98765], ["total_price_cents", 98765], ["order_id", 7], ["created_at", "2020-11-18 20:00:48.167263"], ["updated_at", "2020-11-18 20:00:48.167263"]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "line_items" ("product_id", "quantity", "item_price_cents", "total_price_cents", "order_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["product_id", 12], ["quantity", 1], ["item_price_cents", 248375], ["total_price_cents", 248375], ["order_id", 7], ["created_at", "2020-11-18 20:00:48.170913"], ["updated_at", "2020-11-18 20:00:48.170913"]]
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "line_items" ("product_id", "quantity", "item_price_cents", "total_price_cents", "order_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["product_id", 13], ["quantity", 2], ["item_price_cents", 2099], ["total_price_cents", 4198], ["order_id", 7], ["created_at", "2020-11-18 20:00:48.174746"], ["updated_at", "2020-11-18 20:00:48.174746"]]
+  [1m[35m (1.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/orders/7
+Completed 302 Found in 1125ms (ActiveRecord: 9.6ms)
+
+
+Started GET "/orders/7" for 10.0.2.2 at 2020-11-18 20:00:48 +0000
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."order_id" = $1  [["order_id", 7]]
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  Rendered orders/_item.html.erb (1.7ms)
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 11]]
+  Rendered orders/_item.html.erb (1.7ms)
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered orders/_item.html.erb (1.3ms)
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 13]]
+  Rendered orders/_item.html.erb (2.3ms)
+  Rendered orders/show.html.erb within layouts/application (115.8ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (2.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 200 OK in 451ms (Views: 445.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 20:01:02 +0000
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC
+  Rendered products/_product.html.erb (12.8ms)
+  Rendered products/index.html.erb within layouts/application (31.7ms)
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (2.7ms)
+Completed 200 OK in 375ms (Views: 372.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 20:02:06 +0000
+Processing by ProductsController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2020-11-18 20:02:06 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+  [1m[35mCategory Load (0.6ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (4.8ms)
+Completed 200 OK in 363ms (Views: 362.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/products" for 10.0.2.2 at 2020-11-18 20:02:14 +0000
+Processing by Admin::ProductsController#index as HTML
+Filter chain halted as #<Proc:0x00007f9b88329f80@/home/vagrant/.rvm/gems/ruby-2.3.5/gems/actionpack-4.2.6/lib/action_controller/metal/http_authentication.rb:70> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/products" for 10.0.2.2 at 2020-11-18 20:02:19 +0000
+Processing by Admin::ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."id" DESC[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered admin/products/_product.html.erb (64.0ms)
+  Rendered admin/products/index.html.erb within layouts/application (96.4ms)
+  [1m[35mCategory Load (0.9ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (3.7ms)
+Completed 200 OK in 442ms (Views: 438.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 20:02:46 +0000
+Processing by ProductsController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2020-11-18 20:02:46 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (2.6ms)
+Completed 200 OK in 291ms (Views: 289.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/login" for 10.0.2.2 at 2020-11-18 20:02:57 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vchb3TCmdsYxSAaeDOEZRXgTz8ueF5liXnw+ldIXQkrvhCogj7gJNdAFwdpeqL9f2+pDrmFTLrQDx9ihMT96lQ==", "email"=>"jokesonyou@gmai.com", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "jokesonyou@gmai.com"]]
+Redirected to http://localhost:3000/login
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2020-11-18 20:02:58 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (3.0ms)
+Completed 200 OK in 315ms (Views: 313.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/login" for 10.0.2.2 at 2020-11-18 20:03:09 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D048NCo8OtWDcCjftkDV5G855kUEOtFmPRH7QgmLfhBdAk3JlSJFJmI975vkCXP+zMBqIPt+ZrBgqh126qNGzw==", "email"=>"jokesonyou@gmail.com", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "jokesonyou@gmail.com"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "jokesonyou@gmail.com"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 71ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 20:03:09 +0000
+Processing by ProductsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mProduct Load (0.8ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC[0m
+  Rendered products/_product.html.erb (20.2ms)
+  Rendered products/index.html.erb within layouts/application (45.2ms)
+  [1m[35mCategory Load (0.8ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (3.5ms)
+Completed 200 OK in 450ms (Views: 446.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/cart" for 10.0.2.2 at 2020-11-18 20:03:11 +0000
+Processing by CartsController#show as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" WHERE 1=0[0m
+  Rendered carts/show.html.erb within layouts/application (1.7ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (3.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 284ms (Views: 283.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products" for 10.0.2.2 at 2020-11-18 20:03:16 +0000
+Processing by ProductsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC[0m
+  Rendered products/_product.html.erb (17.0ms)
+  Rendered products/index.html.erb within layouts/application (34.8ms)
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (2.6ms)
+Completed 200 OK in 362ms (Views: 358.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/logout" for 10.0.2.2 at 2020-11-18 20:09:01 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2020-11-18 20:09:01 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (3.1ms)
+Completed 200 OK in 334ms (Views: 332.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 20:09:07 +0000
+Processing by ProductsController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2020-11-18 20:09:07 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+  [1m[35mCategory Load (0.5ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (3.3ms)
+Completed 200 OK in 310ms (Views: 309.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 20:09:08 +0000
+Processing by ProductsController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2020-11-18 20:09:08 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (2.5ms)
+Completed 200 OK in 342ms (Views: 341.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 20:09:10 +0000
+Processing by ProductsController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2020-11-18 20:09:10 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (2.4ms)
+Completed 200 OK in 326ms (Views: 324.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 20:09:11 +0000
+Processing by ProductsController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2020-11-18 20:09:11 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (4.9ms)
+Completed 200 OK in 351ms (Views: 349.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/about" for 10.0.2.2 at 2020-11-18 20:09:12 +0000
+Processing by AboutsController#show as HTML
+  Rendered abouts/show.html.erb within layouts/application (0.1ms)
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (2.6ms)
+Completed 200 OK in 278ms (Views: 277.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/1" for 10.0.2.2 at 2020-11-18 20:09:14 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "products" WHERE "products"."category_id" = $1  [["category_id", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."category_id" = $1  ORDER BY "products"."created_at" DESC[0m  [["category_id", 1]]
+  Rendered products/_product.html.erb (7.8ms)
+  Rendered categories/show.html.erb within layouts/application (30.6ms)
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (3.0ms)
+Completed 200 OK in 357ms (Views: 338.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 20:09:17 +0000
+Processing by ProductsController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2020-11-18 20:09:17 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (2.3ms)
+Completed 200 OK in 245ms (Views: 244.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 20:09:21 +0000
+Processing by ProductsController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2020-11-18 20:09:21 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (2.7ms)
+Completed 200 OK in 307ms (Views: 305.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2020-11-18 20:09:54 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (54.0ms)
+Completed 200 OK in 384ms (Views: 381.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 20:09:56 +0000
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC
+  Rendered products/_product.html.erb (11.7ms)
+  Rendered products/index.html.erb within layouts/application (36.5ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (2.3ms)
+Completed 200 OK in 349ms (Views: 306.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2020-11-18 20:09:59 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+  [1m[35mCategory Load (0.5ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (2.6ms)
+Completed 200 OK in 282ms (Views: 280.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 20:10:40 +0000
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.7ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC[0m
+  Rendered products/_product.html.erb (13.1ms)
+  Rendered products/index.html.erb within layouts/application (41.8ms)
+  [1m[35mCategory Load (0.5ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (42.6ms)
+Completed 200 OK in 509ms (Views: 464.1ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/cart" for 10.0.2.2 at 2020-11-18 20:10:45 +0000
+Processing by CartsController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products" WHERE 1=0[0m
+  Rendered carts/show.html.erb within layouts/application (2.4ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (2.3ms)
+Completed 200 OK in 353ms (Views: 352.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 20:10:48 +0000
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC[0m
+  Rendered products/_product.html.erb (13.3ms)
+  Rendered products/index.html.erb within layouts/application (36.8ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (3.4ms)
+Completed 200 OK in 400ms (Views: 398.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/cart/add_item?product_id=13" for 10.0.2.2 at 2020-11-18 20:10:50 +0000
+Processing by CartsController#add_item as HTML
+  Parameters: {"authenticity_token"=>"WnxfSI9pImbGqEk17zvQiwJvb6kZx2WZkBSABvLa53oIMC61MHddlSfljnG9cnaRoZbjzOaD0k/Nr2YyEfLfpQ==", "product_id"=>"13"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 20:10:50 +0000
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC[0m
+  Rendered products/_product.html.erb (23.4ms)
+  Rendered products/index.html.erb within layouts/application (58.6ms)
+  [1m[35mCategory Load (0.6ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (3.2ms)
+Completed 200 OK in 613ms (Views: 610.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cart" for 10.0.2.2 at 2020-11-18 20:10:51 +0000
+Processing by CartsController#show as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 13[0m
+  Rendered carts/_item.html.erb (2.7ms)
+  Rendered carts/show.html.erb within layouts/application (22.3ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (2.8ms)
+Completed 200 OK in 376ms (Views: 374.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/orders" for 10.0.2.2 at 2020-11-18 20:12:53 +0000
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pg0VNSn6te7SfFp/hpLLWC8I4MHKs+jL5QMSCZlqHYVsQWTIluTKHTMxnTvU221CjPFspDX3Xx24uPQ9ekIlWg==", "stripeToken"=>"tok_1Hox1LJCdYEkm976dN4dZunA", "stripeTokenType"=>"card", "stripeEmail"=>"kvirani@gmail.com"}
+  [1m[36mProduct Load (0.9ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 13[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "orders" ("email", "total_cents", "stripe_charge_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "kvirani@gmail.com"], ["total_cents", 2099], ["stripe_charge_id", "ch_1Hox1OJCdYEkm976B0rLCWYl"], ["created_at", "2020-11-18 20:12:55.483802"], ["updated_at", "2020-11-18 20:12:55.483802"]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "line_items" ("product_id", "quantity", "item_price_cents", "total_price_cents", "order_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["product_id", 13], ["quantity", 1], ["item_price_cents", 2099], ["total_price_cents", 2099], ["order_id", 8], ["created_at", "2020-11-18 20:12:55.488107"], ["updated_at", "2020-11-18 20:12:55.488107"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/orders/8
+Completed 302 Found in 1462ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/orders/8" for 10.0.2.2 at 2020-11-18 20:12:55 +0000
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mOrder Load (0.4ms)[0m  SELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mLineItem Load (0.4ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."order_id" = $1[0m  [["order_id", 8]]
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 13]]
+  Rendered orders/_item.html.erb (1.5ms)
+  Rendered orders/show.html.erb within layouts/application (28.8ms)
+  [1m[36mCategory Load (0.8ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (4.3ms)
+Completed 200 OK in 473ms (Views: 468.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 20:12:59 +0000
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC
+  Rendered products/_product.html.erb (11.5ms)
+  Rendered products/index.html.erb within layouts/application (34.6ms)
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (3.2ms)
+Completed 200 OK in 394ms (Views: 391.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cart" for 10.0.2.2 at 2020-11-18 20:18:37 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CartsController#show as HTML
+  [1m[35mProduct Load (0.7ms)[0m  SELECT "products".* FROM "products" WHERE 1=0
+  Rendered carts/show.html.erb within layouts/application (115.7ms)
+  [1m[36mCategory Load (0.8ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (68.6ms)
+Completed 200 OK in 1767ms (Views: 1732.6ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 20:18:44 +0000
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC
+  Rendered products/_product.html.erb (574.8ms)
+  Rendered products/index.html.erb within layouts/application (609.2ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (3.3ms)
+Completed 200 OK in 1186ms (Views: 1183.7ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/cart/add_item?product_id=12" for 10.0.2.2 at 2020-11-18 20:18:45 +0000
+Processing by CartsController#add_item as HTML
+  Parameters: {"authenticity_token"=>"+t8aFIp3VVbo/clwp6xoe/3fk17sQgTPtZpaAuh5NRGok2vpNWkqpQmwDjT15c5hXiYfOxMGsxnoIbw2C1ENzg==", "product_id"=>"12"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 20:18:45 +0000
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (1.2ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC
+  Rendered products/_product.html.erb (32.2ms)
+  Rendered products/index.html.erb within layouts/application (76.7ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (2.1ms)
+Completed 200 OK in 601ms (Views: 598.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/products/11" for 10.0.2.2 at 2020-11-18 20:18:46 +0000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered products/show.html.erb within layouts/application (50.0ms)
+  [1m[35mCategory Load (0.6ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (2.6ms)
+Completed 200 OK in 409ms (Views: 385.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 20:18:49 +0000
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC[0m
+  Rendered products/_product.html.erb (17.7ms)
+  Rendered products/index.html.erb within layouts/application (40.5ms)
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (3.7ms)
+Completed 200 OK in 410ms (Views: 408.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/cart/add_item?product_id=11" for 10.0.2.2 at 2020-11-18 20:18:50 +0000
+Processing by CartsController#add_item as HTML
+  Parameters: {"authenticity_token"=>"h7MUno/fX329ZrarlECS/x/6LKhQUyXrOp2CHQBFpJnV/2VjMMEgjlwrce/GCTTlvAOgza8Xkj1nJmQp422cRg==", "product_id"=>"11"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 20:18:50 +0000
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC[0m
+  Rendered products/_product.html.erb (21.4ms)
+  Rendered products/index.html.erb within layouts/application (51.0ms)
+  [1m[35mCategory Load (1.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (4.2ms)
+Completed 200 OK in 574ms (Views: 571.0ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/cart/add_item?product_id=10" for 10.0.2.2 at 2020-11-18 20:18:53 +0000
+Processing by CartsController#add_item as HTML
+  Parameters: {"authenticity_token"=>"KSHKx8fRh4sypdkqnC/xdmO20QN1n4xdZ9FZCxP0eIN7bbs6eM/4eNPoHm7OZldswE9dZorbO4s6ar8/8NxAXA==", "product_id"=>"10"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 20:18:53 +0000
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC[0m
+  Rendered products/_product.html.erb (16.3ms)
+  Rendered products/index.html.erb within layouts/application (38.1ms)
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (2.8ms)
+Completed 200 OK in 466ms (Views: 463.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/cart/add_item?product_id=7" for 10.0.2.2 at 2020-11-18 20:18:57 +0000
+Processing by CartsController#add_item as HTML
+  Parameters: {"authenticity_token"=>"YrEidzKkw+6iMP8cN2zJjoGfz/UmgNQNENK75wf4zB0w/VOKjbq8HUN9OFhlJW+UImZDkNnEY9tNaV3T5ND0wg==", "product_id"=>"7"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 20:18:57 +0000
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC[0m
+  Rendered products/_product.html.erb (12.7ms)
+  Rendered products/index.html.erb within layouts/application (30.7ms)
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (3.9ms)
+Completed 200 OK in 370ms (Views: 368.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cart" for 10.0.2.2 at 2020-11-18 20:18:59 +0000
+Processing by CartsController#show as HTML
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" IN (12, 11, 10, 7)[0m
+  Rendered carts/_item.html.erb (2.2ms)
+  Rendered carts/_item.html.erb (1.7ms)
+  Rendered carts/_item.html.erb (1.8ms)
+  Rendered carts/_item.html.erb (1.6ms)
+  Rendered carts/show.html.erb within layouts/application (96.5ms)
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (2.8ms)
+Completed 200 OK in 550ms (Views: 547.5ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/cart/remove_item?product_id=12" for 10.0.2.2 at 2020-11-18 20:19:05 +0000
+Processing by CartsController#remove_item as HTML
+  Parameters: {"authenticity_token"=>"294DKR8k2j4QFcnvxOqLlXY08rClcdrMvZLe0hFOQmaJknLUoDqlzfFYDquWoy2P1c1+1Vo1bRrgKTjm8mZ6uQ==", "product_id"=>"12"}
+Redirected to http://localhost:3000/cart
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/cart" for 10.0.2.2 at 2020-11-18 20:19:05 +0000
+Processing by CartsController#show as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" IN (11, 10, 7)[0m
+  Rendered carts/_item.html.erb (1.8ms)
+  Rendered carts/_item.html.erb (2.1ms)
+  Rendered carts/_item.html.erb (1.7ms)
+  Rendered carts/show.html.erb within layouts/application (62.0ms)
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (2.8ms)
+Completed 200 OK in 358ms (Views: 356.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/orders" for 10.0.2.2 at 2020-11-18 20:19:37 +0000
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9OTnQzzvcCesrXzEdOtA6Py5v2VUa8jniPz8dcWUPVqmqJa+g/EP1E3gu4AmoubyX0AzAKsvfzHVRxpBJrwFhQ==", "stripeToken"=>"tok_1Hox7rJCdYEkm976IIl4tgDH", "stripeTokenType"=>"card", "stripeEmail"=>"kvirani@gmail.com"}
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" IN (11, 10, 7)[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "orders" ("email", "total_cents", "stripe_charge_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "kvirani@gmail.com"], ["total_cents", 420414], ["stripe_charge_id", "ch_1Hox7uJCdYEkm976vrQBhHfF"], ["created_at", "2020-11-18 20:19:38.649788"], ["updated_at", "2020-11-18 20:19:38.649788"]]
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "line_items" ("product_id", "quantity", "item_price_cents", "total_price_cents", "order_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["product_id", 7], ["quantity", 1], ["item_price_cents", 16449], ["total_price_cents", 16449], ["order_id", 9], ["created_at", "2020-11-18 20:19:38.655365"], ["updated_at", "2020-11-18 20:19:38.655365"]]
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "line_items" ("product_id", "quantity", "item_price_cents", "total_price_cents", "order_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["product_id", 10], ["quantity", 1], ["item_price_cents", 305200], ["total_price_cents", 305200], ["order_id", 9], ["created_at", "2020-11-18 20:19:38.660748"], ["updated_at", "2020-11-18 20:19:38.660748"]]
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "line_items" ("product_id", "quantity", "item_price_cents", "total_price_cents", "order_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["product_id", 11], ["quantity", 1], ["item_price_cents", 98765], ["total_price_cents", 98765], ["order_id", 9], ["created_at", "2020-11-18 20:19:38.665367"], ["updated_at", "2020-11-18 20:19:38.665367"]]
+  [1m[36m (2.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/orders/9
+Completed 302 Found in 1072ms (ActiveRecord: 10.6ms)
+
+
+Started GET "/orders/9" for 10.0.2.2 at 2020-11-18 20:19:38 +0000
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mOrder Load (0.8ms)[0m  SELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mLineItem Load (0.4ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."order_id" = $1[0m  [["order_id", 9]]
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 7]]
+  Rendered orders/_item.html.erb (2.2ms)
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  Rendered orders/_item.html.erb (1.5ms)
+  [1m[35mProduct Load (0.6ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 11]]
+  Rendered orders/_item.html.erb (1.3ms)
+  Rendered orders/show.html.erb within layouts/application (67.2ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (3.1ms)
+Completed 200 OK in 337ms (Views: 331.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 20:19:56 +0000
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC
+  Rendered products/_product.html.erb (14.8ms)
+  Rendered products/index.html.erb within layouts/application (33.0ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (3.0ms)
+Completed 200 OK in 319ms (Views: 317.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/products" for 10.0.2.2 at 2020-11-18 20:20:01 +0000
+Processing by Admin::ProductsController#index as HTML
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."id" DESC
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCategory Load (0.6ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered admin/products/_product.html.erb (42.4ms)
+  Rendered admin/products/index.html.erb within layouts/application (64.2ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (2.3ms)
+Completed 200 OK in 456ms (Views: 450.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/admin/categories" for 10.0.2.2 at 2020-11-18 20:21:19 +0000
+Processing by Admin::CategoriesController#index as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"  ORDER BY "categories"."id" DESC
+  Rendered admin/categories/_category.html.erb (0.6ms)
+  Rendered admin/categories/index.html.erb within layouts/application (22.4ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (2.7ms)
+Completed 200 OK in 286ms (Views: 284.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/categories" for 10.0.2.2 at 2020-11-18 20:21:29 +0000
+Processing by Admin::CategoriesController#index as HTML
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"  ORDER BY "categories"."id" DESC
+  Rendered admin/categories/_category.html.erb (0.2ms)
+  Rendered admin/categories/index.html.erb within layouts/application (20.4ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (2.6ms)
+Completed 200 OK in 352ms (Views: 350.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 20:21:34 +0000
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC
+  Rendered products/_product.html.erb (10.4ms)
+  Rendered products/index.html.erb within layouts/application (30.6ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (2.5ms)
+Completed 200 OK in 285ms (Views: 283.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/13" for 10.0.2.2 at 2020-11-18 20:21:37 +0000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mProduct Load (0.6ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 13]]
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (2.8ms)
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (2.9ms)
+Completed 200 OK in 372ms (Views: 368.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 20:21:42 +0000
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC[0m
+  Rendered products/_product.html.erb (10.1ms)
+  Rendered products/index.html.erb within layouts/application (27.1ms)
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (3.0ms)
+Completed 200 OK in 325ms (Views: 323.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/13" for 10.0.2.2 at 2020-11-18 20:21:49 +0000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 13]]
+  [1m[35mCategory Load (0.4ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (2.9ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (2.8ms)
+Completed 200 OK in 255ms (Views: 251.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 20:21:52 +0000
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC
+  Rendered products/_product.html.erb (13.9ms)
+  Rendered products/index.html.erb within layouts/application (31.4ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (2.9ms)
+Completed 200 OK in 291ms (Views: 289.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-18 20:21:57 +0000
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC
+  Rendered products/_product.html.erb (13.3ms)
+  Rendered products/index.html.erb within layouts/application (30.8ms)
+  [1m[36mCategory Load (0.8ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (3.5ms)
+Completed 200 OK in 346ms (Views: 344.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/signup" for 10.0.2.2 at 2020-11-18 20:22:05 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (27.4ms)
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (2.9ms)
+Completed 200 OK in 281ms (Views: 280.0ms | ActiveRecord: 0.4ms)
