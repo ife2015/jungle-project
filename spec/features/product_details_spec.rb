@@ -21,8 +21,8 @@ RSpec.feature "ProductDetails", type: :feature, js: true do
 
     # DEBUG / VERIFY
     first(".pull-right").click
+    expect(page).to have_css '.products-show'
     puts page.html
     save_screenshot
-    expect(page).to have_css '.products-show'
   end
 end
