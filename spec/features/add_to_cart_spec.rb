@@ -19,7 +19,6 @@ RSpec.feature "AddToCarts", type: :feature, js: true do
     # ACT
     visit root_path
 
-
     # DEBUG / VERIFY
     first(".btn-primary").click
     save_screenshot
