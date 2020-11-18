@@ -8547,3 +8547,37 @@ Processing by SessionsController#new as HTML
   [1m[35mCategory Load (0.9ms)[0m  SELECT "categories".* FROM "categories"
   Rendered layouts/_top_nav.html.erb (68.5ms)
 Completed 200 OK in 1644ms (Views: 1636.4ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-17 23:01:44 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC
+  Rendered products/_product.html.erb (299.8ms)
+  Rendered products/index.html.erb within layouts/application (362.0ms)
+  [1m[36mCategory Load (1.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (87.7ms)
+Completed 200 OK in 2304ms (Views: 2197.7ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-11-17 23:24:52 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.9ms)[0m  SELECT "products".* FROM "products"  ORDER BY "products"."created_at" DESC
+  Rendered products/_product.html.erb (299.9ms)
+  Rendered products/index.html.erb within layouts/application (362.9ms)
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_top_nav.html.erb (72.1ms)
+Completed 200 OK in 2649ms (Views: 2543.0ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/products/11" for 10.0.2.2 at 2020-11-17 23:50:35 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mProduct Load (0.7ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCategory Load (1.1ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered products/show.html.erb within layouts/application (706.1ms)
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered layouts/_top_nav.html.erb (20.8ms)
+Completed 200 OK in 3770ms (Views: 3447.0ms | ActiveRecord: 9.1ms)
