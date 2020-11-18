@@ -23,6 +23,5 @@ RSpec.feature "AddToCarts", type: :feature, js: true do
     first(".btn-primary").click
     save_screenshot
     expect(page).to have_content('My Cart (1)')
-    expect(page).to have_css 'article.product', count: 10
   end
 end
