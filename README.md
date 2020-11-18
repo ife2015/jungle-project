@@ -3,18 +3,20 @@
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
 ## Final Product
-<!-- **Main Scheduler Page**
-!["Screenshot of Main Scheduler Page"](https://github.com/ife2015/scheduler/blob/master/docs/main-page.png)
+**Main product index page**
+!["Screenshot of Main Products Page"](https://github.com/ife2015/jungle-project/blob/master/docs/main-page.png)
 
-**Input Details to Book Appointment**
-!["Screenshot of filled in appointment"](https://github.com/ife2015/scheduler/blob/master/docs/filledindetails.png)
+**Cart page with products**
+!["Screenshot of Cart Page"](https://github.com/ife2015/jungle-project/blob/master/docs/cart-page.png)
 
-**Booked Appointment**
-!["Screenshot of a booked appointment"](https://github.com/ife2015/scheduler/blob/master/docs/booked_details.png)
+**Order Details**
+!["Screenshot of ordered details"](https://github.com/ife2015/jungle-project/blob/master/docs/orderdetails-page.png)
 
-**Deleting booked appointment**
-!["Screenshot of deleting booked appointment"](https://github.com/ife2015/scheduler/blob/master/docs/deleting_details.png) -->
+**Admin Access - Add Category**
+!["Screenshot of Admin View - Category List"](https://github.com/ife2015/jungle-project/blob/master/docs/admin-category-page.png) 
 
+**Admin Access - Add/Delete Product**
+!["Screenshot of Admin View - Product List"](https://github.com/ife2015/jungle-project/blob/master/docs/admin-product-page.png) 
 
 ## Setup
 
